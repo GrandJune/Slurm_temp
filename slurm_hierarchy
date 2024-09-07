@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --time=03:00:00
+#SBATCH --job-name=TbHp1p2
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=junyili@u.nus.edu
+#SBATCH --mem=100gb
+#SBATCH --partition=normal
+#SBATCH --cpus-per-task=50
+#SBATCH --nodes=1
+#SBATCH --exclude=xcng[0-1]
+srun python hierarchy_run_p1p2.py
